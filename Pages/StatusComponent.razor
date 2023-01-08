@@ -1,0 +1,12 @@
+﻿@inherits StatusComponentModel
+<div class="row m-1 p-1">
+<span class="@CssName">@Status.ToString()</span>
+</div>
+<div class="row m-1 p-1">
+    <select class="form-control" @onchange=@OnStstusChange>
+        @foreach (var item in Enum.GetNames<Status>())
+        {
+            <option value="@item">@item</option>
+        }
+    </select>
+</div>

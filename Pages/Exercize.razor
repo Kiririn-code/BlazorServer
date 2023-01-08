@@ -1,0 +1,22 @@
+﻿@page "/exercize"
+@inherits ExercizeModel
+<h1>Demo</h1>
+
+<p class="demo"> This is demo for Blazor</p>
+
+<div class="row m-1 p-1">
+    <p>@Time</p>
+
+    <button @onclick="@GetTime">Press me</button>
+
+    <select class="form-control m-1 p-1">
+        @foreach (var item in Enum.GetNames<Status>())
+        {
+            <option value="@item">@item</option>
+        }
+    </select>
+</div>
+<dic class="row m-2 p-2">
+    <StatusComponent />
+</dic>        
+
